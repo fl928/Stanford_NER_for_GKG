@@ -15,4 +15,7 @@ The Python script multi_processing_get_df.py requires [downloading](https://nlp.
 
 Because this script is running on AWS, and because of connection issue, I want each run with just a small part of each dataset, I wrote the python script generate_input_list.py. For example,  if a dataset contains 100 rows, I want to run through the first row to the last row, and each run just 20 rows, then the script will ask me some details of my requirement generate a text file. Then for the real preprocessing script, it will read text file I generated and loop through them. Therefore, we can minimized the cost of lost connection to AWS.
 
-## 
+## Execution
+
+```
+```

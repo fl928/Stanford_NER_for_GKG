@@ -15,6 +15,8 @@ The Python script multi_processing_get_df.py requires [downloading](https://nlp.
 
 Because this script is running on AWS, and because of connection issue, I want each run with just a small part of each dataset, I wrote the python script generate_input_list.py. For example,  if a dataset contains 100 rows, I want to run through the first row to the last row, and each run just 20 rows, then the script will ask me some details of my requirement generate a text file. Then for the real preprocessing script, it will read text file I generated and loop through them. Therefore, we can minimized the cost of lost connection to AWS.
 
+The cloud version code is running on AWS, using 96 cores machines, the process of the code depends on how many cores you have. Since the model from Stanford NER is a Java Based model, implementing it in Python might require some more time. As my test, each string in python takes around 1.2-1.6 seconds. While using multiprocessing library, the speed of preprocessing 100 rows was increased from 161 seconds to 7 seconds on AWS.
+
 ## Execution
 
 * Generate the input list.

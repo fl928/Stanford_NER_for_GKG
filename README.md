@@ -9,7 +9,7 @@
 
 ## Project description
 
-The Project was aiming to preprocess the unstruectured data set from Google Big Query. The original dataset is more than 15 TB and here in this Github is just a small subset that provide for test. The original code was running in AWS EC2 using multiprocessing. My mission was to preprocess the organizations in filtered dataset(temp.csv) and only retain organizations that might be companies (because here organizations might be police department, university, council and etc.).
+The Project was aiming to preprocess the unstruectured data set from Google Big Query. The original dataset is more than 15 TB and here in this Github is just a small subset that provide for test. The original code was running in AWS EC2 using multiprocessing, the code in this Github is modified a little bit because I cannot provide mcuh information about the working dataset, the cloud version code is commanded in the script. My mission was to preprocess the organizations in filtered dataset(temp.csv) and only retain organizations that might be companies (because here organizations might be police department, university, council and etc.).
 
 The Python script multi_processing_get_df.py requires [downloading](https://nlp.stanford.edu/software/stanford-ner-2018-10-16.zip) a well trained NLP model from [Stanford Named Entity Recognizer (NER)](https://nlp.stanford.edu/software/CRF-NER.html).
 
@@ -17,5 +17,18 @@ Because this script is running on AWS, and because of connection issue, I want e
 
 ## Execution
 
+* Generate the input list.
+
 ```
+(base) FandeMacBook-Pro:gkg_preprocessing fanliang$ python generate_input_list.py
+Enter the start number: 0
+Enter the end number: 300
+Enter how many you want to run each time: 20
+Do you want to start from 0 and end at 300 and run 20 each time, type in [y/n]: y
+```
+* Run the preprocessing
+
+```
+(base) FandeMacBook-Pro:gkg_preprocessing fanliang$ python multi_processing_get_df.py test.csv input_list.txt
+  7%|███▎                                             | 1/15 [00:29<06:56, 29.73s/it]
 ```

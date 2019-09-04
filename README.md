@@ -1,2 +1,2 @@
-# gkg_preprocessing
-For Job Apply
+# Script for preprocessing
+

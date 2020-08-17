@@ -1,8 +1,8 @@
-# Script for preprocessing
+# An Implementation of Stanford NER model and boost with multiprocessing
 
 ## Introduction of files:
 
-* generate_input_list.py - code that generate a text file that bin starting row number and stop row number with required size of each bin.
+* generate_input_list.py - code that generate a text file with user's choice of starting row number and stop row number with required size of each bin.
 * multi_processing_get_df.py - cloud version of preprocessing script applying multiprocessing.
 * temp.csv - a subset of filtered from GKG dataset
 * test.csv - a subset of orgnizations without business entities.

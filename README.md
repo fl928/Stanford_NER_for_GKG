@@ -2,9 +2,9 @@
 
 ## Introduction of files:
 
-* generate_input_list.py - code that generate a text file with user's choice of starting row number and stop row number with required size of each bin.
-* multi_processing_get_df.py - cloud version of preprocessing script applying multiprocessing.
-* temp.csv - a subset of filtered from GKG dataset
+* generate_input_list.py - code generating input text file for multiprocessing module in __multi_processing_get_df.py__.
+* multi_processing_get_df.py - modified version for cloud version of preprocessing script which can run locally.
+* temp.csv - a subset of dataframe from GKG dataset
 * test.csv - a subset of orgnizations without business entities.
 
 ## Project description
